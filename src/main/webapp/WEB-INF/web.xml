@@ -13,6 +13,13 @@
 
     <request-character-encoding>UTF-8</request-character-encoding>
 
+    <listener>
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>helloServlet</servlet-name>
         <servlet-class>ancient.web.HelloServlet</servlet-class>
@@ -23,7 +30,7 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>spring</servlet-name>
+        <servlet-name>springServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -32,10 +39,9 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>spring</servlet-name>
+        <servlet-name>springServlet</servlet-name>
         <url-pattern>/spring/*</url-pattern>
         <!--<url-pattern>/*</url-pattern>-->
         <!--<url-pattern>*.do</url-pattern>-->
     </servlet-mapping>
-
 </web-app>

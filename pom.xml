@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>11</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -84,6 +84,6 @@
             </plugins>
         </pluginManagement>
 
-        <finalName>${artifactId}</finalName>
+        <finalName>${project.artifactId}</finalName>
     </build>
 </project>
